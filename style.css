@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  font-family: 'Roboto Condensed';
+
+  list-style: none;
+}
+.navbar{
+  margin-top: 20px;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+}
+.navlinks{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 3rem;
+}
+.hover-links{
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-decoration: none;
+}
+.hover-links:hover{
+  color: #066eaa;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#ham-menu{
+  z-index: 1;
+  position: absolute;
+  right: 3%;
+  display: none;
+}
+#ham-toggle{
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  right: 3%;
+  display: none;
+}
+.hero-image{
+  width: 100%;
+  position: relative;
+}
+.hero-image img{
+  width: 100%;
+  height: 50%;
+}
+.banner-image{
+  max-width: fit-content;
+}
+.hero-box{
+  position: absolute;
+  z-index: 3;
+  width: 37%;
+  height: 47%;
+  top: 45%;
+  left: 13%;
+  padding: 4rem 2rem;
+  background: white;
+}
+.hero-box h1{
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.hero-box p{
+  font-size: 21.5px;
+  margin-bottom: 2rem;
+}
+#contact-btn{
+  background-color: #034469;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bg-color{
+  background-color: #034469;
+}
+.items{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.card {
+  position: relative;
+  background-color: #fff;
+  margin: 2rem;
+  width: 30%;
+}
+.team-img{
+  width: 100%;
+}
+.card-body{
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  background-color: #fff;
+}
+
+footer{
+  overflow: hidden;
+  position: relative;;
+}
+#contact-img{
+  max-width: fit-content;
+  opacity: 0.9;
+}
+.contact-details{
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  top: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form{
+  display: flex;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255);
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.contact-details h2{
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.contact-form input{
+  height: 2.5rem;
+  width: 15rem;
+  background-color: #cad1d6;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+}
+.contact-form button{
+  background-color: #053450;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-address{
+  width: 100%;
+  height: 10rem;
+  padding: 2rem;
+  background-color: #034469;
+}
+.copyright{
+  text-align: center;
+  background-color: rgb(117, 116, 116);
+  color: white;
+  padding: 2px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 850px) {
+  *{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #ham-menu{
+    display: block;
+  }
+  #ham-toggle{
+    opacity: 0;
+    display: block;
+  }
+  .navlinks-container{
+    position: absolute;
+    background-color: #1f1d1d;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 160px;
+    display: none;
+  }
+  .navlinks{
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+  #ham-toggle:checked ~ .navlinks-container{
+    display: block;
+  }
+}
